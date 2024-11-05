@@ -1,8 +1,8 @@
-package com.university.testcsv;
+package com.university.testcsv.part_1;
 
 
 import com.university.course.Course;
-import com.university.csv.WriterCSV;
+import com.university.csv.part_1.WriterCSV;
 import com.university.student.Student;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

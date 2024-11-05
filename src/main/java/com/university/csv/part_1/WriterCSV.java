@@ -1,4 +1,4 @@
-package com.university.csv;
+package com.university.csv.part_1;
 
 import com.university.student.Student;
 
@@ -19,8 +19,7 @@ public class WriterCSV {
             // Escribir datos de cada estudiante
             for (Student student : students) {
                 writer.append("\n")
-                        .append(student.getName()).append(",")
-                        .append(String.valueOf(student.getSubjects().size()));
+                        .append(student.toStrCSV_1());
             }
         } catch (IOException e) {
             System.err.println("Error al escribir el archivo CSV: " + filePath);

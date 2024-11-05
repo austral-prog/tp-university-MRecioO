@@ -1,4 +1,4 @@
-package com.university.csv;
+package com.university.csv.part_1;
 
 import com.university.course.Course;
 import com.university.student.Student;
@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class CSVReader {
 
-    public static Map<Student, List<Course>> readFromCSV(String filePath) {
+    public static CSVResult readFromCSV(String filePath) {
         Map<String, Student> studentMap = new HashMap<>();
         Map<String, Course> courseMap = new HashMap<>();
         Map<Student, List<Course>> mapSC = new HashMap<>();
@@ -60,6 +60,6 @@ public class CSVReader {
             e.printStackTrace();
         }
 
-        return mapSC;
+        return new CSVResult(studentMap, courseMap, mapSC);
     }
 }

@@ -1,6 +1,6 @@
-package com.university.testcsv;
+package com.university.testcsv.part_1;
 import com.university.course.Course;
-import com.university.csv.CSVReader;
+import com.university.csv.part_1.CSVReader;
 
 import com.university.student.Student;
 import org.junit.jupiter.api.Test;
@@ -8,17 +8,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class TestCSVReader {
 
     @Test
     public void testReadFromCSV(){
-        String testFilePath = "src/test/java/com/university/testcsv/test_students.csv"; //Classroom,Subject,Student_Name,Student_Email,Subject_Teacher
+        String testFilePath = "src/test/java/com/university/testcsv/part_1/test_reader.csv"; //Classroom,Subject,Student_Name,Student_Email,Subject_Teacher
                                                                                         //578,Political Science,Olivia Red,olivia.red@student.org,Prof. Sam
                                                                                         //331,Mathematics,Quincy Johnson,quincy.johnson@email.com,Prof. Hank
 
-        Map<Student, List<Course>> sC = CSVReader.readFromCSV(testFilePath); //{Quincy Johnson, 1=[Mathematics], Olivia Red, 1=[Political Science]}
+        Map<Student, List<Course>> sC = CSVReader.readFromCSV(testFilePath).getStudentCourseMap(); //{Quincy Johnson, 1=[Mathematics], Olivia Red, 1=[Political Science]}
 
         assertEquals(2, sC.size());
 
@@ -48,4 +47,15 @@ public class TestCSVReader {
         assertEquals("olivia.red@student.org", studentOlivia.listEmail().getFirst());
         assertEquals(oliviaCourses, sC.get(studentOlivia));
     }
+    @Test
+    public void testReadFromCSV_IOException() { // Agit l correr este test saldra un mensaje de error pero esta bien
+        String invalidFilePath = "src/test/java/com/university/testcsv/non_existent_file.csv";
+
+        // Al leer desde un archivo que no existe, debe retornar un mapa vacío
+        Map<Student, List<Course>> result = CSVReader.readFromCSV(invalidFilePath).getStudentCourseMap();
+
+        // Asegúrate de que el resultado sea un mapa vacío
+        assertTrue(result.isEmpty(), "El mapa debería estar vacío cuando se produce una IOException.");
+    }
+
 }

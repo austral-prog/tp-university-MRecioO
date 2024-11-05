@@ -69,4 +69,26 @@ public class TestEvaluation {
         assertTrue(writtenExam.listExercises().size() == 10);
         assertEquals(4.6, writtenExam.calculateGrade(),"El promedio");
     }
+    @Test
+    void testEquals(){
+        FinalExam copia = new FinalExam(student, course, "FINAL_PRACTICAL_WORK", "TP Final");
+        FinalExam diffStudent = new FinalExam(new Student("Mati"), course, "FINAL_PRACTICAL_WORK", "TP Final");
+        FinalExam diffCourse = new FinalExam(student, new Course("Prog"), "FINAL_PRACTICAL_WORK", "TP Final");
+        FinalExam diffEvalType = new FinalExam(student, course, "no puede paser en teoria", "TP Final");
+        FinalExam diffEvalNAme = new FinalExam(student, course, "FINAL_PRACTICAL_WORK", "NO TP FINAL");
+        PracticalWork diiffClass = new PracticalWork(student, course, "FINAL_PRACTICAL_WORK", "TP Final");
+
+        assertTrue(finalExam.equals(finalExam));
+        assertTrue(finalExam.equals(copia));
+        assertFalse(finalExam.equals(diffStudent));
+        assertFalse(finalExam.equals(diffCourse));
+        assertFalse(finalExam.equals(diffEvalType));
+        assertFalse(finalExam.equals(diffEvalNAme));
+        assertFalse(finalExam.equals(diiffClass));
+        assertFalse(finalExam.equals(null));
+
+        finalExam.addExercise(new Exercise("Ej1", 6));
+        assertTrue(finalExam.equals(copia),"no impoorta si agrego un ejercicio");
+
+    }
 }

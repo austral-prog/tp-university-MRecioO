@@ -1,11 +1,12 @@
 package com.university.evaluation;
 
+import com.university.csv.part_2.ToStrCSV_2;
 import com.university.student.Student;
 import com.university.course.Course;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Evaluation {
+public abstract class Evaluation implements ToStrCSV_2<Evaluation> {
     protected Student student;
     protected Course course;
     protected String evaluationType;
@@ -47,4 +48,26 @@ public abstract class Evaluation {
     public List<Exercise> listExercises() {
         return exercises;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Evaluation other = (Evaluation) obj;
+
+        // Comparamos cada atributo excepto 'exercises'
+        return student.equals(other.student) &&
+                course.equals(other.course) &&
+                evaluationType.equals(other.evaluationType) &&
+                evaluationName.equals(other.evaluationName);
+    }
+    @Override
+    public String toStrCSV_2() {
+        return evaluationName + ",";
+    }
+
 }
