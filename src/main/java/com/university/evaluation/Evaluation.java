@@ -1,6 +1,7 @@
 package com.university.evaluation;
 
 import com.university.csv.part_2.ToStrCSV_2;
+import com.university.csv.part_3.ToStrCSV_3;
 import com.university.student.Student;
 import com.university.course.Course;
 import java.util.ArrayList;
@@ -68,6 +69,10 @@ public abstract class Evaluation implements ToStrCSV_2<Evaluation> {
     @Override
     public String toStrCSV_2() {
         return evaluationName + ",";
+    }
+    @Override
+    public String toString() {
+        return evaluationName + " Grade: " + calculateGrade() ;
     }
 
 }

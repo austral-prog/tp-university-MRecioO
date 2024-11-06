@@ -48,7 +48,7 @@ public class TestCSVReader {
         assertEquals(oliviaCourses, sC.get(studentOlivia));
     }
     @Test
-    public void testReadFromCSV_IOException() { // Agit l correr este test saldra un mensaje de error pero esta bien
+    public void testReadFromCSV_IOException() { // Al correr este test saldra un mensaje de error pero esta bien
         String invalidFilePath = "src/test/java/com/university/testcsv/non_existent_file.csv";
 
         // Al leer desde un archivo que no existe, debe retornar un mapa vacío

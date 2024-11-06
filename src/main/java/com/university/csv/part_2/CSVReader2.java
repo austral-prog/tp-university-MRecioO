@@ -1,7 +1,7 @@
 package com.university.csv.part_2;
 
 import com.university.evaluation.Evaluation;
-import com.university.evaluation.EvaluationFactory;
+import com.university.evaluation.types.EvaluationFactory;
 import com.university.evaluation.Exercise;
 import com.university.course.Course;
 import com.university.student.Student;
@@ -39,7 +39,7 @@ public class CSVReader2 {
                 // Obtiene o crear el curso
                 Course course = courseMap.getOrDefault(subject, new Course(subject));
                 Course existentCourse = courseMap.putIfAbsent(subject, course);
-                    // Si el estudiante y/o el curso no estaba en el input_1
+                // Si el estudiante y/o el curso no estaba en el input_1
                 if (existentStudent == null || existentCourse == null) {
                     student.addSubject(course);
                     course.addStudent(student);
@@ -52,7 +52,7 @@ public class CSVReader2 {
                 // Crea y añadir ejercicio a la evaluación
                 Exercise exercise = new Exercise(exerciseName, Grade);
                 evaluation.addExercise(exercise);
-                    // Si la evaluacion no existia, se agrega al estudiante y al curso
+                // Si la evaluacion no existia, se agrega al estudiante y al curso
                 if (existentEvaluation == null) {
                     student.addEvaluation(evaluation);
                     course.addEvaluation(evaluation);

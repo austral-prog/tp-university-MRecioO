@@ -4,12 +4,10 @@ import com.university.course.Course;
 import com.university.csv.part_1.CSVReader;
 import com.university.csv.part_2.CSVReader2;
 import com.university.evaluation.Evaluation;
-import com.university.evaluation.EvaluationFactory;
 import com.university.evaluation.Exercise;
 import com.university.student.Student;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

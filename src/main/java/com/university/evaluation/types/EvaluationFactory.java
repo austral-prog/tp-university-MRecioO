@@ -1,6 +1,6 @@
-package com.university.evaluation;
+package com.university.evaluation.types;
 
-import com.university.evaluation.types.*;
+import com.university.evaluation.Evaluation;
 import com.university.student.Student;
 import com.university.course.Course;
 

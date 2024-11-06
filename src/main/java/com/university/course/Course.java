@@ -1,13 +1,14 @@
 package com.university.course;
 
 import com.university.csv.part_2.ToStrCSV_2;
+import com.university.csv.part_3.ToStrCSV_3;
 import com.university.evaluation.Evaluation;
 import com.university.student.Student;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Course implements ToStrCSV_2<Course> {
+public class Course implements ToStrCSV_2<Course>, ToStrCSV_3<Course> {
     private List<String> classroom;
     private String subject;
     private List<String> teacher;
@@ -65,6 +66,10 @@ public class Course implements ToStrCSV_2<Course> {
     @Override
     public String toStrCSV_2() {
         return subject + ",";
+    }
+    @Override
+    public String toStrCSV_3() {
+        return toStrCSV_2();
     }
 
     @Override

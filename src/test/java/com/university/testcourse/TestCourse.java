@@ -66,6 +66,7 @@ public class TestCourse {
 
         String expected = "Math,";
         assertEquals(expected, course.toStrCSV_2());
+        assertEquals(expected, course.toStrCSV_3());
     }
     @Test
     void testEqualsAndHashCode() {

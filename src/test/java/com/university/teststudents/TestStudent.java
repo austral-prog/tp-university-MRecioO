@@ -2,7 +2,7 @@ package com.university.teststudents;
 
 import com.university.course.Course;
 import com.university.evaluation.Evaluation;
-import com.university.evaluation.EvaluationFactory;
+import com.university.evaluation.types.EvaluationFactory;
 import com.university.student.Student;
 import org.junit.jupiter.api.Test;
 
@@ -32,6 +32,9 @@ public class TestStudent {
         Student s = new Student("Mati");
 
         assertEquals("Mati,0", s.toStrCSV_1());
+
+        assertTrue("Mati,".equals(s.toStrCSV_2()));
+        assertTrue(s.toStrCSV_2().equals(s.toStrCSV_3()));
 
     }
     @Test

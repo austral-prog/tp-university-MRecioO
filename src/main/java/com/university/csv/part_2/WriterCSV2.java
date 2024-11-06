@@ -32,7 +32,7 @@ public class WriterCSV2 {
                         if (studentNameCompare != 0) return studentNameCompare;
 
                         return -1;
-                        //return eval1.getStudent().getName().compareToIgnoreCase(eval2.getStudent().getName());
+
                     })
                     .forEach(evaluation -> {
 
