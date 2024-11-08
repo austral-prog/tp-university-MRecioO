@@ -1,16 +1,13 @@
 package com.university.testcsv.part_1;
 
-import com.university.course.Course;
-import com.university.csv.part_1.CSVReader;
-import com.university.csv.part_1.CSVResult;
-import com.university.student.Student;
+import com.university.entity.classroom.Course;
+import com.university.csv_app.part_1.CSVReader;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
 
-import com.university.student.Student;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCSVResults {

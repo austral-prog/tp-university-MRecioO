@@ -1,9 +1,9 @@
 package com.university.teststudents;
 
-import com.university.course.Course;
-import com.university.evaluation.Evaluation;
-import com.university.evaluation.types.EvaluationFactory;
-import com.university.student.Student;
+import com.university.entity.classroom.Course;
+import com.university.entity.evaluation.Evaluation;
+import com.university.entity.evaluation.types.EvaluationFactory;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

@@ -1,15 +1,12 @@
 package com.university.testcriteria;
 
-import com.university.approval_criteria.AbstractCriteria;
-import com.university.approval_criteria.types.CriteriaFactory;
-import com.university.course.Course;
-import com.university.evaluation.Evaluation;
-import com.university.evaluation.Exercise;
-import com.university.evaluation.types.FinalExam;
-import com.university.evaluation.types.OralExam;
-import com.university.evaluation.types.PracticalWork;
-import com.university.evaluation.types.WrittenExam;
-import com.university.student.Student;
+import com.university.entity.evaluation.approval_criteria.AbstractCriteria;
+import com.university.entity.evaluation.approval_criteria.types.CriteriaFactory;
+import com.university.entity.classroom.Course;
+import com.university.entity.evaluation.Evaluation;
+import com.university.entity.evaluation.Exercise;
+import com.university.entity.evaluation.types.OralExam;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -80,7 +77,7 @@ public class TestCriteria {
         assertTrue(cMin.isApproved());// no cambia
 
         oralExam5.addExercise(new Exercise("Ej1", 2));
-        cA.listEvaluations().add(oralExam5);// agrega otra evaluacion con nota 2 para desaprobar 
+        cA.listEvaluations().add(oralExam5);// agrega otra evaluacion con nota 2 para desaprobar
         assertFalse(cMin.isApproved());
     }
 }

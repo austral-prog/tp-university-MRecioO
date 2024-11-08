@@ -1,13 +1,12 @@
 package com.university.testcriteria;
 
-import com.university.approval_criteria.AbstractCriteria;
-import com.university.approval_criteria.types.CriteriaFactory;
-import com.university.approval_criteria.types.MaxAboveValue;
-import com.university.approval_criteria.types.MinAboveValue;
-import com.university.evaluation.Evaluation;
+import com.university.entity.evaluation.approval_criteria.AbstractCriteria;
+import com.university.entity.evaluation.approval_criteria.types.CriteriaFactory;
+import com.university.entity.evaluation.approval_criteria.types.MaxAboveValue;
+import com.university.entity.evaluation.approval_criteria.types.MinAboveValue;
+import com.university.entity.evaluation.Evaluation;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 

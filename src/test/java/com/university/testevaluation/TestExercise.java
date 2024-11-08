@@ -1,6 +1,6 @@
 package com.university.testevaluation;
 
-import com.university.evaluation.Exercise;
+import com.university.entity.evaluation.Exercise;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

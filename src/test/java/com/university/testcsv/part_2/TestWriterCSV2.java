@@ -1,10 +1,11 @@
 package com.university.testcsv.part_2;
 
-import com.university.course.Course;
-import com.university.csv.part_2.WriterCSV2;
-import com.university.evaluation.*;
-import com.university.evaluation.types.*;
-import com.university.student.Student;
+import com.university.entity.classroom.Course;
+import com.university.csv_app.part_2.WriterCSV2;
+import com.university.entity.evaluation.Evaluation;
+import com.university.entity.evaluation.Exercise;
+import com.university.entity.evaluation.types.FinalExam;
+import com.university.entity.classroom.Student;
 
 import org.junit.jupiter.api.Test;
 

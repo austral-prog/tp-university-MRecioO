@@ -1,8 +1,8 @@
 package com.university.testcsv.part_1;
-import com.university.course.Course;
-import com.university.csv.part_1.CSVReader;
+import com.university.entity.classroom.Course;
+import com.university.csv_app.part_1.CSVReader;
 
-import com.university.student.Student;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

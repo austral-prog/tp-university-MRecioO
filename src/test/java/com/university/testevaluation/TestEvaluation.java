@@ -1,9 +1,12 @@
 package com.university.testevaluation;
 
-import com.university.course.Course;
-import com.university.evaluation.*;
-import com.university.evaluation.types.*;
-import com.university.student.Student;
+import com.university.entity.classroom.Course;
+import com.university.entity.evaluation.Exercise;
+import com.university.entity.evaluation.types.FinalExam;
+import com.university.entity.evaluation.types.OralExam;
+import com.university.entity.evaluation.types.PracticalWork;
+import com.university.entity.evaluation.types.WrittenExam;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

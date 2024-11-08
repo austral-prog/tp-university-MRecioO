@@ -1,11 +1,11 @@
 package com.university.testcsv.part_2;
 
-import com.university.course.Course;
-import com.university.csv.part_1.CSVReader;
-import com.university.csv.part_2.CSVReader2;
-import com.university.evaluation.Evaluation;
-import com.university.evaluation.Exercise;
-import com.university.student.Student;
+import com.university.entity.classroom.Course;
+import com.university.csv_app.part_1.CSVReader;
+import com.university.csv_app.part_2.CSVReader2;
+import com.university.entity.evaluation.Evaluation;
+import com.university.entity.evaluation.Exercise;
+import com.university.entity.classroom.Student;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
